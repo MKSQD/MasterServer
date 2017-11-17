@@ -6,7 +6,7 @@ using Unosquare.Labs.EmbedIO.Constants;
 class Program {
 
     const int serverTimeoutMinutes = 2;
-    const string address = "http://localhost:1234/";
+    const string address = "http://*:23888";
 
     static void Main(string[] args) {
 
