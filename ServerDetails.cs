@@ -21,16 +21,16 @@ public class ServerDetails {
     public string address;
 
     [JsonRequired]
-    public short port;
+    public ushort port;
 
     [JsonRequired]
     public string version;
 
     [JsonRequired]
-    public short players;
+    public ushort players;
 
     [JsonRequired]
-    public short maxPlayers;
+    public ushort maxPlayers;
 
     [JsonRequired]
     public string title;
