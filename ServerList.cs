@@ -44,7 +44,7 @@ public class ServerList {
     /// <remarks>Minutes since server</remarks>
     /// <see cref="ServerList(int)"/>
     public void RemoveOldServers() {
-        var itemsToRemove = _server.Where(val => (val.Value.lastUpdated - DateTime.Now).TotalMinutes > _serverTimeoutMinutes).ToArray();
+        var itemsToRemove = _server.Where(entry => (DateTime.Now - entry.Value.lastUpdated).TotalMinutes >= _serverTimeoutMinutes).ToArray();
         foreach (var item in itemsToRemove) {
             _server.Remove(item.Key);
         }
